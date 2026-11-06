@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Fuentes/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Fuentes/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+body{
+    background-color: #111;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    display: none;
+}
+#imgAlpits{
+    width: 400px;
+    height: 150px;
+    display: block;
+    margin: 0 0 20px;
+}
+#buttonInicio{
+    border: 0;
+    background-image: linear-gradient(
+        150deg, #9500ff, #09f, #00ddff
+    );
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 27px 3px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    left: 90px;
+}
+#buttonInicio span{
+    background-color: #111;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 25px 40px;
+    border-radius: 6px;
+    transition: .3s;
+}
+#buttonInicio:hover{
+    box-shadow: 2px 2px 10px #000000;
+}
+#buttonInicio:hover span{
+    background: none;
+}
+#buttonInicio:active{
+    transform: scale(0.9);
+}
+header{
+    background-color: transparent;
+    border: 2px solid #00000032;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 10px #ffffff32;
+    border-radius: 10px;
+    padding: 10px 15px 40px;
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    text-align: center;
+    transition: box-shadow .3s;
+}
+header:hover{
+    box-shadow: 2px 2px 10px #000000;
+}
+header:hover #buttonInicio{
+    box-shadow: 2px 2px 10px #000000;
+}
+nav i{
+    margin: 2px 5px 0 0;
+}
+nav{
+    background-color: transparent;
+    border: 2px solid #00000032;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #ffffff32;
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 50px;
+    width: 420px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    border-radius: 10px;
+    transition: .3s;
+}
+#h2Administracion{
+    font-size: 30px;
+    text-align: center;
+}
+#labelIDSecreto{
+    display: block;
+    text-align: center;
+}
+#inputIdSecreto{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #00000032;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+}
+#inputIdSecreto::placeholder{
+    color: #ffffff;
+}
+#divInputId i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+#divInputId{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+}
+#buttonIngreso{
+    background-color: #000000;
+    cursor: pointer;
+    border: none;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 40px;
+    width: 200px;
+    height: 45px;
+    transition: background .3s;
+}
+#buttonIngreso:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0000, #c42121, #eb334b, #c5315d, #c531b9, #ae00ff, #8c00ff, #6200ff, #314cc5, #319bc5, #314cc5, #6200ff, #8c00ff, #ae00ff, #c531b9, #c5315d, #c42121, #eb334b);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+#buttonIngreso:hover{
+    background: none;
+}
+#buttonIngreso:active{
+    transform: scale(0.9);
+    transition: .3s;
+}
+@keyframes glowing{
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+#divIngreso{
+    background-color: transparent;
+    border: 2px solid #00000032;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #ffffff32;
+    text-align: center;
+    width: 420px;
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    border-radius: 10px;
+    padding: 30px 40px 45px;
+    transition: .3s;
+}
+section:hover #divIngreso{
+    box-shadow: 2px 2px 10px #000000;
+}
+section:hover nav{
+    box-shadow: 2px 2px 10px #000000;
+}
+#h2Contacto{
+    background-color: #000000aa;
+    border: 2px solid #00000032;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #ffffff32;
+    display: inline;
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 12px;
+}
+#aTelegram, #aGmail{
+    margin-right: 50px;
+}
+#aTelegram, #aGmail, #aWhatsapp{
+    transition: .3s;
+}
+#aTelegram:hover{
+    color: #00ffff;
+}
+#aGmail:hover{
+    color: #ff0000;
+}
+#aWhatsapp:hover{
+    color: #00ff00;
+}
+#divLinks a{
+    color: #ffffff;
+    text-decoration: none;
+}
+#divLinks{
+    background-color: #000000aa;
+    border: 2px solid #00000032;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #ffffff32;
+    width: 420px;
+    padding: 2px 0;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    bottom: 5px;
+    right: 30px;
+    transition: .3s;
+}
+footer:hover #h2Contacto{
+    box-shadow: 2px 2px 10px #000000;
+}
+footer:hover #divLinks{
+    box-shadow: 2px 2px 10px #000000;
+}
